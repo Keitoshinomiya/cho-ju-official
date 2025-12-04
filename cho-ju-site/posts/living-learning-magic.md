@@ -51,7 +51,7 @@ CHO-JUの卓上クリーナー「SUI-COM（スイコム）」は、単なる掃�
 
 <div class="internal-link-card">
   <a href="/products/sui-com" class="flex items-center no-underline">
-    <img src="/images/desktop-cleaner.jpg" class="internal-link-thumb" alt="SUI-COM" />
+    <img src="/images/blog/desktop-cleaner-white-lifestyle.jpg" class="internal-link-thumb" alt="SUI-COM" />
     <div class="internal-link-text">
       <strong>あわせて見たい：SUI-COM</strong>
       <span>子供の手に馴染む、優しいデザインと吸引力</span>

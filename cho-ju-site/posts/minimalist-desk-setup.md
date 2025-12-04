@@ -46,7 +46,7 @@ SUI-COMを手に取り、デスクの上をゆっくりと滑らせる。
 
 <div class="internal-link-card">
   <a href="/products/sui-com" class="flex items-center no-underline">
-    <img src="/images/desktop-cleaner.jpg" class="internal-link-thumb" alt="SUI-COM" />
+    <img src="/images/blog/desktop-cleaner-white-lifestyle.jpg" class="internal-link-thumb" alt="SUI-COM" />
     <div class="internal-link-text">
       <strong>あわせて見たい：SUI-COM</strong>
       <span>インテリアに溶け込む6色のカラーバリエーション</span>

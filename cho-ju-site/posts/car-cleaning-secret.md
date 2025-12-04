@@ -44,7 +44,7 @@ SUI-COM(+)は、一見すると水筒のようなスリムなボディ。
 
 <div class="internal-link-card">
   <a href="/products/sui-com" class="flex items-center no-underline">
-    <img src="/images/handy-cleaner.jpg" class="internal-link-thumb" alt="SUI-COM(+)" />
+    <img src="/images/blog/car-handy-cleaner-action.jpg" class="internal-link-thumb" alt="SUI-COM(+)" />
     <div class="internal-link-text">
       <strong>あわせて見たい：SUI-COM(+)</strong>
       <span>車載に最適。プロ仕様の吸引力を、片手で。</span>

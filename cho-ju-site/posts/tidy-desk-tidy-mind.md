@@ -35,7 +35,7 @@ productId: "sui-com"
 
 <div class="internal-link-card">
   <a href="/products/sui-com" class="flex items-center no-underline">
-    <img src="/images/desktop-cleaner.jpg" class="internal-link-thumb" alt="SUI-COM" />
+    <img src="/images/blog/keyboard-cleaning.jpg" class="internal-link-thumb" alt="SUI-COM" />
     <div class="internal-link-text">
       <strong>あわせて見たい：SUI-COM</strong>
       <span>ノイズのないデザインで、思考をクリアに。</span>
