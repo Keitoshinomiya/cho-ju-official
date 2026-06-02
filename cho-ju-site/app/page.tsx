@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import ProductShowcase from '@/components/ProductShowcase';
 import BlogSection from '@/components/BlogSection';
 import ReviewSection from '@/components/ReviewSection';
+import VideoSection from '@/components/VideoSection';
 import FAQSection from '@/components/FAQSection';
 import AssuranceSection from '@/components/AssuranceSection';
 import Footer from '@/components/Footer';
@@ -12,7 +13,7 @@ export default function Home() {
   const allPostsData = getSortedPostsData();
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-kinari flex flex-col">
       <Header />
       <main className="flex-grow">
         <Hero />
@@ -24,15 +25,22 @@ export default function Home() {
         
         {/* 第三者の評価で信頼性を高める */}
         <ReviewSection />
-        
+
+        {/* YouTube紹介動画（lib/videos.ts に動画を追加すると表示される） */}
+        <VideoSection />
+
         {/* Philosophy Section */}
-        <section id="about" className="relative py-24 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase mb-2">Philosophy</h2>
-                <h3 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
-                    CHO-JU（長寿）に込めた想い
+        <section id="about" className="relative py-32 bg-kinari overflow-hidden">
+            <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+                <div className="inline-flex items-center justify-center text-sumi-soft text-sm tracking-[0.3em] uppercase mb-6">
+                    <span className="w-6 h-px bg-shu mr-3" />
+                    Philosophy
+                    <span className="w-6 h-px bg-shu ml-3" />
+                </div>
+                <h3 className="font-serif text-3xl sm:text-4xl font-medium text-sumi mb-10 tracking-wide">
+                    CHO-JUに込めた想い
                 </h3>
-                <p className="max-w-2xl mx-auto text-xl text-gray-500 leading-relaxed">
+                <p className="max-w-2xl mx-auto text-lg text-sumi-soft leading-loose">
                     モノが溢れる現代だからこそ、<br />
                     私たちは「長く愛される道具」を作ることにこだわります。<br /><br />
                     それは耐久性があるということだけではありません。<br />

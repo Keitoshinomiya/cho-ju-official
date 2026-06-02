@@ -2,8 +2,19 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: var(--font-inter);
-  
+  --font-sans: var(--font-noto-sans);
+  --font-serif: var(--font-noto-serif);
+
+  /* 和モダン Palette ─ 墨・生成り・藍・朱 */
+  --color-sumi: #1c1a17;        /* 墨色：主要テキスト */
+  --color-sumi-soft: #4a463f;   /* やわらかい墨：副次テキスト */
+  --color-kinari: #f7f3ec;      /* 生成り：ベース背景 */
+  --color-kinari-deep: #efe9dd; /* 生成り（濃）：セクション区切り */
+  --color-ai: #213b54;          /* 藍色：主アクセント */
+  --color-ai-deep: #16293b;     /* 藍（濃）：濃色セクション */
+  --color-shu: #b8432e;         /* 朱色：差し色（ごく控えめに） */
+  --color-hai: #d8d0c2;         /* 灰白：ボーダー・罫線 */
+
   /* Custom Animations */
   --animate-blob: blob 7s infinite;
   --animate-subtle-zoom: subtle-zoom 20s infinite alternate;
@@ -34,7 +45,7 @@
 }
 
 body {
-  @apply bg-white text-gray-900;
+  @apply bg-kinari text-sumi;
 }
 
 .animation-delay-2000 {
@@ -55,48 +66,48 @@ body {
 }
 
 .article-category {
-  @apply inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold tracking-widest rounded-full mb-4;
+  @apply inline-block px-3 py-1 border border-hai text-sumi-soft text-xs font-bold tracking-widest mb-4;
 }
 
 .article-title {
-  @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight;
+  @apply font-serif text-3xl md:text-4xl font-medium text-sumi mb-4 leading-tight;
 }
 
 .article-meta {
-  @apply text-gray-500 text-sm font-medium;
+  @apply text-sumi-soft text-sm font-medium;
 }
 
 .article-thumb {
-  @apply w-full aspect-video object-cover rounded-2xl shadow-lg mb-12;
+  @apply w-full aspect-video object-cover mb-12;
 }
 
 .article-body {
-  @apply prose prose-lg prose-indigo max-w-none;
+  @apply prose prose-lg max-w-none prose-headings:text-sumi prose-p:text-sumi-soft prose-a:text-ai prose-strong:text-sumi;
 }
 
 .article-body h2 {
-  @apply text-2xl font-bold text-gray-900 mt-12 mb-6 border-l-4 border-indigo-500 pl-4;
+  @apply font-serif text-2xl font-medium text-sumi mt-12 mb-6 border-l-2 border-shu pl-4;
 }
 
 .article-body h3 {
-  @apply text-xl font-bold text-gray-900 mt-10 mb-4;
+  @apply font-serif text-xl font-medium text-sumi mt-10 mb-4;
 }
 
 .article-body p {
-  @apply text-gray-600 leading-relaxed mb-6;
+  @apply text-sumi-soft leading-loose mb-6;
 }
 
 .article-body blockquote {
-  @apply border-l-4 border-gray-200 pl-6 italic text-gray-600 my-8 py-2 bg-gray-50 rounded-r-lg;
+  @apply border-l-2 border-hai pl-6 italic text-sumi-soft my-8 py-2 bg-kinari-deep;
 }
 
 /* Internal Link Card Style */
 .internal-link-card {
-  @apply flex items-center bg-white border border-gray-200 rounded-xl p-4 my-10 !no-underline transition-all duration-300 hover:shadow-lg hover:border-indigo-200;
+  @apply flex items-center bg-kinari border border-hai p-4 my-10 !no-underline transition-all duration-300 hover:border-ai;
 }
 
 .internal-link-thumb {
-  @apply w-20 h-20 object-cover rounded-lg mr-4 flex-shrink-0 shadow-sm;
+  @apply w-20 h-20 object-cover mr-4 flex-shrink-0;
   margin: 0 !important; /* Override prose default margins */
 }
 
@@ -105,14 +116,14 @@ body {
 }
 
 .internal-link-text strong {
-  @apply text-gray-900 font-bold text-lg mb-1 transition-colors block;
+  @apply text-sumi font-bold text-lg mb-1 transition-colors block;
 }
 
 /* Hover effect for link card title */
 .internal-link-card:hover .internal-link-text strong {
-  @apply text-indigo-600;
+  @apply text-ai;
 }
 
 .internal-link-text span {
-  @apply text-gray-500 text-sm font-medium;
+  @apply text-sumi-soft text-sm font-medium;
 }

@@ -3,12 +3,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ShoppingBag, Star, ChevronDown } from 'lucide-react';
-import BeforeAfter from '@/components/BeforeAfter';
+import { ArrowLeft, ShoppingBag, Check } from 'lucide-react';
 import StickyCTA from '@/components/StickyCTA';
 import ModelViewerWrapper from '@/components/ModelViewerWrapper';
 import RichFeatureSection from '@/components/RichFeatureSection';
 import ReviewSection from '@/components/ReviewSection'; // Added ReviewSection
+import ProductVideos from '@/components/ProductVideos';
+import ProductGallery from '@/components/ProductGallery';
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -31,140 +32,197 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-white flex flex-col font-sans">
+    <div className="min-h-screen bg-kinari flex flex-col font-sans">
       <Header />
-      
+
       <main className="flex-grow">
-        
-        {/* 1. Cinematic Hero Section */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gray-50">
-             <div className="absolute inset-0 z-0">
-                {/* Background Image with subtle parallax effect (simulated with fixed bg) */}
-                <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover opacity-90 scale-105 animate-subtle-zoom"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-             </div>
-             
-             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
-                <div className="max-w-3xl">
-                    <div className="inline-block px-4 py-1 rounded-full border border-white/30 text-white/90 text-sm font-medium mb-6 backdrop-blur-sm uppercase tracking-widest">
-                        {product.category}
+
+        {/* 1. Hero — クリーンな分割レイアウト（和モダン） */}
+        <section className="relative bg-kinari pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-hai/60">
+             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <Link href="/#products" className="inline-flex items-center text-sm text-sumi-soft hover:text-ai transition-colors mb-10">
+                    <ArrowLeft size={16} className="mr-2" /> 製品一覧へ戻る
+                </Link>
+
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    {/* 左：コピー */}
+                    <div className="order-2 lg:order-1">
+                        <div className="inline-flex items-center text-sumi-soft text-sm tracking-[0.3em] uppercase mb-6">
+                            <span className="w-6 h-px bg-shu mr-3" />
+                            {product.category}
+                        </div>
+                        <h1 className="font-serif text-4xl md:text-6xl font-medium text-sumi tracking-tight mb-6 leading-tight">
+                            {product.name}
+                        </h1>
+                        <p className="text-lg md:text-xl text-sumi-soft font-light mb-10 leading-loose max-w-xl">
+                            {product.tagline}
+                        </p>
+
+                        <div className="flex flex-wrap items-end gap-x-8 gap-y-5 mb-10">
+                            <div>
+                                <span className="block text-xs text-sumi-soft uppercase tracking-[0.2em] mb-1">Price</span>
+                                <span className="font-serif text-3xl text-sumi">{product.price}</span>
+                            </div>
+                            <a
+                                href={product.link || '#'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center justify-center px-9 py-4 bg-ai text-kinari text-base font-medium hover:bg-ai-deep transition-colors"
+                            >
+                                Amazonで購入 <ShoppingBag size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+                            </a>
+                        </div>
+
+                        {product.specs && (
+                            <dl className="flex flex-wrap gap-x-10 gap-y-3 border-t border-hai pt-6">
+                                {product.specs.slice(0, 3).map((spec, i) => (
+                                    <div key={i}>
+                                        <dt className="text-xs text-sumi-soft uppercase tracking-wider mb-0.5">{spec.label}</dt>
+                                        <dd className="text-sm text-sumi font-medium">{spec.value}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        )}
                     </div>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight mb-6 leading-none drop-shadow-lg">
-                        {product.name}
-                    </h1>
-                    <p className="text-xl md:text-3xl text-gray-200 font-light mb-10 leading-relaxed max-w-2xl drop-shadow-md">
-                        {product.tagline}
-                    </p>
-                    
-                    <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-                        <a
-                            href={product.link || '#'}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-gray-900 text-lg font-bold rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.5)] hover:scale-105"
-                        >
-                            <span className="relative z-10 flex items-center">
-                                Amazonで購入 <ShoppingBag size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
-                            </span>
-                        </a>
-                        <div className="flex items-center text-white/90 backdrop-blur-sm bg-white/10 px-4 py-2 rounded-lg border border-white/10">
-                             <div className="flex text-yellow-400 mr-3">
-                                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
-                             </div>
-                             <span className="text-sm font-medium border-l border-white/30 pl-3">Based on 1,200+ Reviews</span>
+
+                    {/* 右：商品画像 */}
+                    <div className="order-1 lg:order-2">
+                        <div className="relative aspect-square w-full bg-white border border-hai overflow-hidden">
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                fill
+                                priority
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-contain p-6"
+                            />
                         </div>
                     </div>
                 </div>
              </div>
-
-             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
-                <ChevronDown size={32} />
-             </div>
         </section>
 
-        {/* 2. Rich Feature Storytelling */}
-        <RichFeatureSection 
-            features={product.features} 
-            painPoints={product.painPoints} 
-            image={product.image}
+        {/* 2. Product Gallery */}
+        {product.gallery && product.gallery.length > 0 && (
+            <section className="py-24 lg:py-32 bg-kinari-deep">
+                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center justify-center text-sumi-soft text-sm tracking-[0.3em] uppercase mb-5">
+                            <span className="w-6 h-px bg-shu mr-3" />
+                            Gallery
+                        </div>
+                        <h2 className="font-serif text-3xl md:text-5xl font-medium text-sumi">細部まで、見てください。</h2>
+                    </div>
+                    <ProductGallery images={product.gallery} name={product.name} />
+                 </div>
+            </section>
+        )}
+
+        {/* 3. Rich Feature Storytelling */}
+        <RichFeatureSection
+            features={product.features}
+            painPoints={product.painPoints}
+            image={product.gallery?.[1] ?? product.image}
             description={product.longDescription || product.description}
         />
 
         {/* 3. 3D Model Showcase (Dark Mode) */}
         {product.modelPath && (
-            <section className="py-32 bg-black text-white overflow-hidden relative">
-                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-black to-black opacity-50"></div>
+            <section className="py-32 bg-ai-deep text-kinari overflow-hidden relative">
                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                      <div className="text-center mb-16">
-                        <span className="text-indigo-500 font-bold tracking-widest uppercase text-sm mb-2 block">Technology</span>
-                        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">360° Experience</h2>
-                        <p className="text-gray-400 text-xl max-w-2xl mx-auto">
+                        <span className="text-kinari/60 tracking-[0.3em] uppercase text-sm mb-3 block">Technology</span>
+                        <h2 className="font-serif text-4xl md:text-6xl font-medium text-kinari mb-6">360° Experience</h2>
+                        <p className="text-kinari/60 text-xl max-w-2xl mx-auto leading-relaxed">
                             指先ひとつで、その質感とフォルムを体感する。<br/>
                             シンプルを極めたデザインを、あらゆる角度から。
                         </p>
                      </div>
-                     
-                     <div className="h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-gray-900/50 backdrop-blur-sm">
+
+                     <div className="h-[500px] lg:h-[600px] w-full overflow-hidden border border-kinari/10 bg-sumi/30 backdrop-blur-sm">
                          <ModelViewerWrapper path={product.modelPath} height="100%" />
                      </div>
                  </div>
             </section>
         )}
         
-        {/* 4. Before / After Interactive */}
-        <section className="py-32 bg-white">
-             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <div className="order-2 lg:order-1">
-                         <h2 className="text-4xl font-bold text-gray-900 mb-6">劇的な変化を、その手で。</h2>
-                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            「片付かない」というストレスは、実はほんの数秒で解消できます。<br/>
-                            スライダーを動かして、SUI-COMがある生活とない生活の違いを体験してください。
-                         </p>
-                         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                            <h4 className="font-bold text-gray-900 mb-2">ここがポイント</h4>
-                            <ul className="space-y-2 text-gray-600 text-sm">
-                                <li>• 散らかった消しカスも一往復でスッキリ</li>
-                                <li>• 手を汚さずにゴミ捨てまで完了</li>
-                                <li>• 机に置いたままでも絵になるデザイン</li>
-                            </ul>
-                         </div>
+        {/* 4. Before / After (課題 → 解決) */}
+        <section className="py-32 bg-kinari">
+             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <div className="inline-flex items-center justify-center text-sumi-soft text-sm tracking-[0.3em] uppercase mb-5">
+                        <span className="w-6 h-px bg-shu mr-3" />
+                        Before &amp; After
                     </div>
-                    <div className="order-1 lg:order-2 h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                        <BeforeAfter imageSrc={product.image} alt={product.name} />
+                    <h2 className="font-serif text-3xl md:text-5xl font-medium text-sumi">
+                        その「ちょっとした不満」、<br className="sm:hidden" />手放しませんか。
+                    </h2>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-px bg-hai border border-hai overflow-hidden">
+                    {/* BEFORE */}
+                    <div className="bg-kinari-deep p-10 lg:p-12">
+                        <span className="inline-block px-4 py-1 border border-hai text-sumi-soft text-xs font-medium uppercase tracking-[0.2em] mb-8">
+                            Before
+                        </span>
+                        <h3 className="font-serif text-2xl font-medium text-sumi mb-8 leading-snug">
+                            こんな毎日に、<br/>心当たりはありませんか。
+                        </h3>
+                        <ul className="space-y-5">
+                            {product.painPoints.map((point, index) => (
+                                <li key={index} className="flex items-start text-sumi-soft leading-relaxed">
+                                    <span className="text-shu font-serif text-lg mr-4 leading-none mt-0.5 select-none">―</span>
+                                    <span>{point}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                 </div>
+
+                    {/* AFTER */}
+                    <div className="bg-ai-deep text-kinari p-10 lg:p-12">
+                        <span className="inline-block px-4 py-1 border border-kinari/30 text-kinari/80 text-xs font-medium uppercase tracking-[0.2em] mb-8">
+                            After
+                        </span>
+                        <h3 className="font-serif text-2xl font-medium text-kinari mb-4 leading-snug">
+                            {product.name} のある暮らし。
+                        </h3>
+                        <p className="text-kinari/70 leading-loose mb-8">
+                            {product.tagline}
+                        </p>
+                        <ul className="space-y-5">
+                            {product.features.slice(0, 3).map((feature, index) => (
+                                <li key={index} className="flex items-start text-kinari/90 leading-relaxed">
+                                    <Check size={18} className="text-shu mr-4 mt-0.5 flex-shrink-0" />
+                                    <span>{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
              </div>
         </section>
 
         {/* 5. Usage Steps (Clean Layout) */}
         {product.usageSteps && (
-            <section className="py-32 bg-gray-50 border-t border-gray-200">
+            <section className="py-32 bg-kinari-deep border-t border-hai/60">
                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">使い方は、驚くほどシンプル。</h2>
-                        <p className="text-xl text-gray-500">複雑な操作は一切ありません。</p>
+                        <h2 className="font-serif text-3xl md:text-5xl font-medium text-sumi mb-6">使い方は、驚くほどシンプル。</h2>
+                        <p className="text-xl text-sumi-soft">複雑な操作は一切ありません。</p>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-3 gap-12">
                         {product.usageSteps.map((step, index) => (
                             <div key={index} className="relative group">
-                                <div className="absolute -top-4 -left-4 text-9xl font-bold text-white drop-shadow-sm select-none z-0">
+                                <div className="absolute -top-4 -left-4 font-serif text-9xl text-kinari drop-shadow-sm select-none z-0">
                                     {index + 1}
                                 </div>
-                                <div className="relative z-10 bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 h-full">
-                                    <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-indigo-200">
+                                <div className="relative z-10 bg-kinari p-8 border border-hai hover:border-ai hover:-translate-y-1 transition-all duration-300 h-full">
+                                    <div className="w-12 h-12 bg-ai text-kinari flex items-center justify-center font-serif text-xl mb-6">
                                         {index + 1}
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                                    <h3 className="font-serif text-2xl font-medium text-sumi mb-4">{step.title}</h3>
+                                    <p className="text-sumi-soft leading-loose">{step.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -175,14 +233,14 @@ export default async function ProductPage({ params }: PageProps) {
 
         {/* 6. Technical Specs (Modern Grid) */}
         {product.specs && (
-            <section className="py-32 bg-white">
+            <section className="py-32 bg-kinari">
                  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center tracking-tight">Technical Specifications</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
+                    <h2 className="font-serif text-3xl font-medium text-sumi mb-12 text-center tracking-tight">Technical Specifications</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-hai border border-hai overflow-hidden">
                         {product.specs.map((spec, index) => (
-                            <div key={index} className="bg-white p-8 flex flex-col md:flex-row md:items-center justify-between hover:bg-gray-50 transition-colors">
-                                <span className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2 md:mb-0">{spec.label}</span>
-                                <span className="text-lg font-bold text-gray-900 text-right">{spec.value}</span>
+                            <div key={index} className="bg-kinari p-8 flex flex-col md:flex-row md:items-center justify-between hover:bg-kinari-deep transition-colors">
+                                <span className="text-sm font-medium text-sumi-soft uppercase tracking-wider mb-2 md:mb-0">{spec.label}</span>
+                                <span className="text-lg font-bold text-sumi text-right">{spec.value}</span>
                             </div>
                         ))}
                     </div>
@@ -192,6 +250,9 @@ export default async function ProductPage({ params }: PageProps) {
 
         {/* 7. Reviews (Integrated) */}
         <ReviewSection />
+
+        {/* 8. 商品別のYouTube紹介動画（該当があれば表示） */}
+        <ProductVideos productId={product.id} />
 
       </main>
       

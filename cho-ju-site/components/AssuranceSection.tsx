@@ -25,16 +25,19 @@ const features = [
 
 export default function AssuranceSection() {
   return (
-    <section className="bg-indigo-900 py-16 text-white">
+    <section className="bg-ai-deep py-20 text-kinari">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center p-4">
-              <div className="w-16 h-16 bg-indigo-800 rounded-full flex items-center justify-center mb-4">
-                <feature.icon size={32} className="text-indigo-300" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-              <p className="text-indigo-200 text-sm leading-relaxed">{feature.description}</p>
+            <div
+              key={index}
+              className={`flex flex-col items-center text-center px-6 ${
+                index > 0 ? 'lg:border-l lg:border-kinari/15' : ''
+              }`}
+            >
+              <feature.icon size={32} strokeWidth={1.5} className="text-kinari/70 mb-5" />
+              <h3 className="font-serif text-lg mb-2 tracking-wide">{feature.title}</h3>
+              <p className="text-kinari/60 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

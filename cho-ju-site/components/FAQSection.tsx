@@ -25,18 +25,18 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-kinari py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="font-serif text-3xl sm:text-4xl font-medium text-sumi tracking-wide">
             よくあるご質問
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-base text-sumi-soft">
             お客様から寄せられる質問にお答えします。
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="border-t border-hai">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
@@ -50,13 +50,13 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+    <div className="bg-kinari overflow-hidden border-b border-hai">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
+        className="w-full px-2 py-5 flex items-center justify-between text-left focus:outline-none"
       >
-        <span className="text-lg font-medium text-gray-900">{question}</span>
-        <span className="ml-6 flex-shrink-0 text-indigo-500">
+        <span className="text-base font-medium text-sumi">{question}</span>
+        <span className="ml-6 flex-shrink-0 text-ai">
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
         </span>
       </button>
@@ -68,7 +68,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+            <div className="px-2 pb-6 text-sumi-soft leading-loose">
               {answer}
             </div>
           </motion.div>

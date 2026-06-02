@@ -47,11 +47,11 @@ export default function TableOfContents() {
   if (headings.length === 0) return null;
 
   return (
-    <nav className="sticky top-24 hidden lg:block pl-8 border-l border-gray-100">
-      <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">
+    <nav className="hidden lg:block pl-6 border-l border-hai">
+      <h4 className="text-xs font-medium text-sumi-soft uppercase tracking-[0.2em] mb-5">
         目次
       </h4>
-      <ul className="space-y-3 text-sm">
+      <ul className="space-y-3 text-sm leading-relaxed">
         {headings.map((item) => (
           <li key={item.id} className={item.level === 3 ? 'pl-4' : ''}>
             <a
@@ -62,8 +62,8 @@ export default function TableOfContents() {
               }}
               className={`block transition-colors duration-200 ${
                 activeId === item.id
-                  ? 'text-indigo-600 font-medium'
-                  : 'text-gray-500 hover:text-gray-900'
+                  ? 'text-ai font-medium'
+                  : 'text-sumi-soft hover:text-sumi'
               }`}
             >
               {item.text}

@@ -13,12 +13,21 @@ export interface PostData {
   description: string;
   image?: string;
   category?: string;
+  tags?: string[];
   relatedProduct?: string; // 関連商品ID
   contentHtml?: string;
 }
 
+// posts/ 配下の Markdown ファイル名（.md）だけを対象にする。
+// （.DS_Store や下書き用の _ 始まりファイル、CONTENT_PLAN などを除外し、100本規模でも壊れないようにする）
+function getPostFileNames(): string[] {
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((name) => name.endsWith('.md') && !name.startsWith('_') && !name.startsWith('.'));
+}
+
 export function getSortedPostsData(): PostData[] {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = getPostFileNames();
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
@@ -27,14 +36,15 @@ export function getSortedPostsData(): PostData[] {
 
     // excerptをdescriptionとして使用、imageとcategoryも取得
     const description = matterResult.data.excerpt || matterResult.data.description || '';
-    
+
     return {
       id,
-      title: matterResult.data.title,
-      date: matterResult.data.date,
+      title: matterResult.data.title || id,
+      date: matterResult.data.date || '',
       description: description,
       image: matterResult.data.image,
       category: matterResult.data.category,
+      tags: matterResult.data.tags || [],
       relatedProduct: matterResult.data.productId, // productIdをrelatedProductとして扱う
     } as PostData;
   });
@@ -68,6 +78,7 @@ export async function getPostData(id: string): Promise<PostData> {
     description: description,
     image: matterResult.data.image,
     category: matterResult.data.category,
+    tags: matterResult.data.tags || [],
     relatedProduct: matterResult.data.productId,
   } as PostData;
 }
