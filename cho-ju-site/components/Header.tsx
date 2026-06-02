@@ -20,14 +20,14 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-kinari/90 backdrop-blur-md border-b border-hai/60 py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold tracking-widest text-gray-900">
+            <Link href="/" className="text-2xl font-bold tracking-[0.2em] text-sumi">
               CHO-JU
             </Link>
           </div>
@@ -38,10 +38,10 @@ export default function Header() {
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors relative group"
+                className="text-sumi-soft hover:text-sumi px-3 py-2 text-sm font-medium tracking-wide transition-colors relative group"
               >
                 {item}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
+                <span className="absolute inset-x-3 bottom-0 h-px bg-ai transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
               </Link>
             ))}
           </nav>
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-600 hover:text-gray-900 p-2"
+              className="text-sumi-soft hover:text-sumi p-2"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -65,7 +65,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100"
+            className="md:hidden bg-kinari border-t border-hai/60"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {['Products', 'About', 'Blog'].map((item) => (
@@ -73,7 +73,7 @@ export default function Header() {
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  className="block px-3 py-2 text-base font-medium text-sumi-soft hover:text-sumi hover:bg-kinari-deep transition-colors"
                 >
                   {item}
                 </Link>

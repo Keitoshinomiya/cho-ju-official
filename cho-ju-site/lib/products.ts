@@ -37,7 +37,7 @@ export const products: Product[] = [
       '勉強の邪魔になる細かなゴミが気になる'
     ],
     price: '¥1,980〜',
-    image: '/images/desktop-cleaner.jpg',
+    image: '/images/products/sui-com/01.jpg',
     category: 'Desktop Cleaner',
     features: ['直感的なワンボタン操作', '子供の手に馴染むサイズ感', 'インテリアを邪魔しない6色展開', 'USB充電でコードレス'],
     link: 'https://www.amazon.co.jp/dp/B0C36W7DPL',
@@ -51,8 +51,12 @@ export const products: Product[] = [
       { label: '付属品', value: '充電ケーブル、掃除用ブラシ、日本語説明書' },
     ],
     gallery: [
-        '/images/desktop-cleaner.jpg',
-        '/images/handy-cleaner.jpg'
+        '/images/products/sui-com/01.jpg',
+        '/images/products/sui-com/02.jpg',
+        '/images/products/sui-com/04.jpg',
+        '/images/products/sui-com/03.jpg',
+        '/images/products/sui-com/06.jpg',
+        '/images/products/sui-com/05.jpg',
     ],
     usageSteps: [
         { title: 'Step 1', description: '本体上部のスイッチを一回押して電源ON。' },
@@ -74,11 +78,19 @@ export const products: Product[] = [
       '電気をつけると眩しすぎて目が覚める'
     ],
     price: '¥1,980',
-    image: '/images/sensor-light.jpg',
+    image: '/images/products/yoru-terras/01.jpg',
     category: 'Sensor Light',
     features: ['高感度人感センサー', '目に優しい暖色LED', '配線不要でどこでも設置', '省エネ長持ちバッテリー'],
     link: 'https://www.amazon.co.jp/dp/B0CB89RK9N',
     orientation: 'right',
+    gallery: [
+        '/images/products/yoru-terras/01.jpg',
+        '/images/products/yoru-terras/06.jpg',
+        '/images/products/yoru-terras/02.jpg',
+        '/images/products/yoru-terras/04.jpg',
+        '/images/products/yoru-terras/05.jpg',
+        '/images/products/yoru-terras/03.jpg',
+    ],
     specs: [
       { label: 'サイズ', value: '200mm x 30mm x 20mm' },
       { label: 'センサー範囲', value: '約3m / 120度' },
@@ -95,7 +107,7 @@ export const products: Product[] = [
     id: 'sui-com-plus',
     name: 'SUI-COM(+)',
     tagline: '「あとでやる」を「今終わらせる」。機動力という性能。',
-    description: '大きな掃除機をわざわざ出すほどではないけれど、放っておけない食べこぼしやホコリ。SUI-COM(+)は、500mlペットボトルほどのサイズに、驚くべき吸引力を凝縮しました。',
+    description: '大きな掃除機をわざわざ出すほどではないけれど、放っておけない食べこぼしやホコリ。SUI-COM(+)は、手のひらサイズに「吸引・ブロー・空気入れ・空気抜き」の4役を凝縮した多機能ハンディクリーナー。車内やアウトドアでも活躍します。',
     longDescription: '掃除機をクローゼットから出して、コンセントを差して...その手間が「掃除」を億劫にします。SUI-COM(+)なら、気になったその瞬間にサッと取り出し、秒で解決。車内のシートの隙間、窓のサッシ、ソファの隅。今まで見て見ぬふりをしていた場所が、これ一台で驚くほど綺麗になります。パワフルなのに、驚くほど軽い。これが新しい掃除のスタンダードです。',
     painPoints: [
       '掃除機を出すのが重くて面倒',
@@ -103,11 +115,19 @@ export const products: Product[] = [
       '階段や高い場所の掃除が大変'
     ],
     price: '¥2,980',
-    image: '/images/handy-cleaner.jpg',
+    image: '/images/products/sui-com-plus/01.jpg',
     category: 'Handy Cleaner',
-    features: ['500円玉も吸い込む吸引力', 'わずか300gの軽量設計', '狭い隙間も狙えるノズル付き', '水洗い可能なフィルター'],
-    link: 'https://www.amazon.co.jp/dp/B0C36W7DPL', // 仮でSUI-COMと同じに設定（本来は別のID）
+    features: ['4in1の多機能（吸引／ブロー／空気入れ／空気抜き）', '車内・アウトドア・布団圧縮にも対応', 'Type-C充電のコードレス設計', '狭い隙間も狙えるノズル付き'],
+    link: 'https://www.amazon.co.jp/dp/B0DLLCY81T', // SUI-COM(+) スイコムプラス（ハンディ4in1・黒）
     orientation: 'left',
+    gallery: [
+        '/images/products/sui-com-plus/01.jpg',
+        '/images/products/sui-com-plus/04.jpg',
+        '/images/products/sui-com-plus/05.jpg',
+        '/images/products/sui-com-plus/02.jpg',
+        '/images/products/sui-com-plus/06.jpg',
+        '/images/products/sui-com-plus/03.jpg',
+    ],
     specs: [
       { label: '吸引力', value: '13000Pa' },
       { label: '重量', value: '300g' },

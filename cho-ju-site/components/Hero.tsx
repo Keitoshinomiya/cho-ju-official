@@ -2,99 +2,90 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="relative bg-white min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Gradients */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-gradient-to-br from-indigo-50 to-blue-50 opacity-60 blur-3xl" />
-        <div className="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-amber-50 to-orange-50 opacity-60 blur-3xl" />
+    <div className="relative bg-kinari min-h-[92vh] flex items-center overflow-hidden">
+      {/* 余白を活かした静かな背景 */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-px h-full bg-hai/50 hidden lg:block lg:left-1/2" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-16">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 w-full pt-24 pb-20">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-20 items-center">
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 text-center lg:text-left"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-sm font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span>
+            <div className="inline-flex items-center text-sumi-soft text-sm tracking-[0.3em] uppercase mb-8">
+              <span className="w-6 h-px bg-shu mr-3" />
               Simple Life with CHO-JU
             </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight mb-6">
+
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] font-medium tracking-tight text-sumi leading-[1.4] mb-8">
               大切なのは、<br />
-              <span className="text-indigo-600">家族と笑う時間</span>を<br />
+              <span className="text-ai">家族と笑う時間</span>を<br />
               増やすこと。
             </h1>
-            
-            <p className="text-lg sm:text-xl text-gray-500 mb-8 leading-relaxed">
+
+            <p className="text-base sm:text-lg text-sumi-soft mb-10 leading-loose">
               「片付けなさい」と怒る時間を減らしたい。<br />
               暗い廊下を歩く不安を取り除きたい。<br />
-              CHO-JUは、そんな家族の「あたりまえの幸せ」を守るための<br className="hidden lg:block"/>
+              CHO-JUは、家族の「あたりまえの幸せ」を守るための<br className="hidden lg:block" />
               シンプルで機能的な道具を作っています。
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-               <a
+              <a
                 href="#products"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-full text-white bg-gray-900 hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-9 py-4 text-base font-medium text-kinari bg-ai hover:bg-ai-deep transition-colors duration-300"
               >
                 製品を見る
               </a>
               <a
                 href="#about"
-                className="inline-flex items-center justify-center px-8 py-4 border border-gray-200 text-base font-bold rounded-full text-gray-700 bg-white hover:bg-gray-50 transition-all hover:border-gray-300"
+                className="inline-flex items-center justify-center px-9 py-4 text-base font-medium text-sumi border border-hai hover:border-sumi transition-colors duration-300"
               >
                 ブランドについて
               </a>
             </div>
           </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="mt-16 lg:mt-0 lg:col-span-6 relative"
           >
-             {/* Hero Image Composition */}
-             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                <Image 
-                    src="/images/desktop-cleaner.jpg" 
-                    alt="Child using SUI-COM"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-8">
-                    <p className="text-white font-medium text-lg">SUI-COM</p>
-                    <p className="text-white/80 text-sm">自ら片付ける習慣を。</p>
-                </div>
-             </div>
-             
-             {/* Floating Card */}
-             <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block"
-             >
-                <div className="flex items-start space-x-4">
-                    <div className="bg-indigo-100 p-3 rounded-full">
-                        <ArrowRight className="text-indigo-600 w-6 h-6" />
-                    </div>
-                    <div>
-                        <p className="font-bold text-gray-900">時短効率 UP</p>
-                        <p className="text-sm text-gray-500 mt-1">毎日の「名もなき家事」を<br/>瞬時に解決します。</p>
-                    </div>
-                </div>
-             </motion.div>
+            <div className="relative overflow-hidden">
+              <Image
+                src="/images/desktop-cleaner.jpg"
+                alt="SUI-COMを使う子ども"
+                width={800}
+                height={640}
+                className="object-cover w-full"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sumi/55 to-transparent p-8">
+                <p className="font-serif text-kinari text-xl tracking-wide">SUI-COM</p>
+                <p className="text-kinari/75 text-sm mt-1 tracking-wide">自ら片付ける習慣を。</p>
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ y: 16, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.7 }}
+              className="absolute -bottom-8 -left-6 lg:-left-10 bg-kinari border border-hai px-7 py-5 max-w-xs hidden md:block"
+            >
+              <p className="font-serif text-sumi text-lg">時短という、やさしさ。</p>
+              <p className="text-sm text-sumi-soft mt-1.5 leading-relaxed">
+                毎日の「名もなき家事」を<br />瞬時に解決します。
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

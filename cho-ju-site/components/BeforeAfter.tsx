@@ -45,13 +45,13 @@ export default function BeforeAfter({ imageSrc, alt }: BeforeAfterProps) {
   return (
     <div className="w-full max-w-3xl mx-auto my-12">
       <div className="text-center mb-6">
-         <h3 className="text-lg font-bold text-gray-900">驚きの変化を体験してください</h3>
-         <p className="text-sm text-gray-500">スライダーを左右に動かして比較</p>
+         <h3 className="font-serif text-lg text-sumi">驚きの変化を体験してください</h3>
+         <p className="text-sm text-sumi-soft">スライダーを左右に動かして比較</p>
       </div>
-      
-      <div 
+
+      <div
         ref={containerRef}
-        className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden select-none cursor-ew-resize shadow-xl"
+        className="relative w-full aspect-[4/3] overflow-hidden select-none cursor-ew-resize shadow-xl"
         onMouseMove={handleMove}
         onTouchMove={handleMove}
         onMouseDown={handleMouseDown}
@@ -59,7 +59,7 @@ export default function BeforeAfter({ imageSrc, alt }: BeforeAfterProps) {
       >
         {/* After Image (Base) - Clean and Bright */}
         <div className="absolute inset-0 w-full h-full">
-           <div className="absolute top-4 right-4 bg-white/80 backdrop-blur text-gray-900 px-3 py-1 rounded-full text-xs font-bold z-10">
+           <div className="absolute top-4 right-4 bg-kinari/85 backdrop-blur text-sumi px-3 py-1 text-xs font-bold z-10">
              AFTER (SUI-COM使用後)
            </div>
            <Image
@@ -75,7 +75,7 @@ export default function BeforeAfter({ imageSrc, alt }: BeforeAfterProps) {
             className="absolute inset-0 w-full h-full overflow-hidden"
             style={{ width: `${sliderPosition}%` }}
         >
-           <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur text-white px-3 py-1 rounded-full text-xs font-bold z-10">
+           <div className="absolute top-4 left-4 bg-sumi/80 backdrop-blur text-kinari px-3 py-1 text-xs font-bold z-10">
              BEFORE
            </div>
            <div className="relative w-full h-full">
@@ -100,7 +100,7 @@ export default function BeforeAfter({ imageSrc, alt }: BeforeAfterProps) {
             className="absolute inset-y-0 w-1 bg-white shadow-lg z-20 flex items-center justify-center"
             style={{ left: `${sliderPosition}%` }}
         >
-            <div className="w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center -ml-0.5 text-indigo-600">
+            <div className="w-10 h-10 bg-kinari rounded-full shadow-xl flex items-center justify-center -ml-0.5 text-ai">
                 <ChevronsLeftRight size={20} />
             </div>
         </div>
