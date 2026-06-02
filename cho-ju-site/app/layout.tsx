@@ -17,6 +17,7 @@ const notoSerif = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cho-ju.com'),
   title: 'CHO-JU | Simple Lifestyle Goods',
   description: 'シンプルかつ機能的な生活雑貨（ハンディクリーナー、卓上クリーナー、センサーライト）をお届けするCHO-JUの公式サイトです。',
 };
