@@ -1,7 +1,7 @@
 [build]
   base = "cho-ju-site"
   command = "next build"
-  publish = "cho-ju-site/.next"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
