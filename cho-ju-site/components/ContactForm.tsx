@@ -31,7 +31,10 @@ export default function ContactForm() {
       body.append('message', form.message);
       body.append('bot-field', form.company); // ハニーポット
 
-      const res = await fetch('/', {
+      // POST 先は静的ファイル(/__forms.html)にする。
+      // "/" だと Next.js の SSR ハンドラに捕まり Netlify Forms の
+      // 送信処理層に届かないため(submission が記録されない)。
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString(),
