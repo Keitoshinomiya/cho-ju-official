@@ -22,19 +22,27 @@ export default function ContactForm() {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/api/contact', {
+      // Netlify Forms へ送信（application/x-www-form-urlencoded）。
+      // form-name は __forms.html で定義した "contact" に一致させる。
+      const body = new URLSearchParams();
+      body.append('form-name', 'contact');
+      body.append('name', form.name);
+      body.append('email', form.email);
+      body.append('message', form.message);
+      body.append('bot-field', form.company); // ハニーポット
+
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
       });
-      const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
         setStatus('success');
         setForm({ name: '', email: '', message: '', company: '' });
       } else {
         setStatus('error');
-        setErrorMsg(data?.error || '送信に失敗しました。時間をおいて再度お試しください。');
+        setErrorMsg('送信に失敗しました。時間をおいて再度お試しください。');
       }
     } catch {
       setStatus('error');
@@ -70,14 +78,24 @@ export default function ContactForm() {
     'focus:outline-none focus:border-ai transition-colors';
 
   return (
-    <form onSubmit={handleSubmit} className="border border-hai bg-kinari-deep p-8 sm:p-10 space-y-7">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="border border-hai bg-kinari-deep p-8 sm:p-10 space-y-7"
+    >
+      {/* Netlify Forms 用の hidden フィールド */}
+      <input type="hidden" name="form-name" value="contact" />
+
       {/* ハニーポット（人間には非表示。ボット対策） */}
       <div className="hidden" aria-hidden="true">
         <label>
           会社名
           <input
             type="text"
-            name="company"
+            name="bot-field"
             tabIndex={-1}
             autoComplete="off"
             value={form.company}
