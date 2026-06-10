@@ -23,6 +23,21 @@ interface PageProps {
   }>;
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  const product = products.find((p) => p.id === id);
+  if (!product) return {};
+  return {
+    title: `${product.name} | CHO-JU`,
+    description: product.description,
+    openGraph: {
+      title: `${product.name} | CHO-JU`,
+      description: product.tagline,
+      images: [product.image],
+    },
+  };
+}
+
 export default async function ProductPage({ params }: PageProps) {
   const { id } = await params;
   const product = products.find((p) => p.id === id);
@@ -31,8 +46,34 @@ export default async function ProductPage({ params }: PageProps) {
     return <div>Product not found</div>;
   }
 
+  // Product 構造化データ（検索結果のリッチリザルト用）
+  const priceNumber = product.price.replace(/[^0-9]/g, '');
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    image: `https://cho-ju.com${product.image}`,
+    brand: { '@type': 'Brand', name: 'CHO-JU' },
+    ...(priceNumber && product.link
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: priceNumber,
+            priceCurrency: 'JPY',
+            url: product.link,
+            availability: 'https://schema.org/InStock',
+          },
+        }
+      : {}),
+  };
+
   return (
     <div className="min-h-screen bg-kinari flex flex-col font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       <main className="flex-grow">

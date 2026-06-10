@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import AmazonClickTracker from '@/components/AmazonClickTracker';
 import './globals.css';
 
 const notoSans = Noto_Sans_JP({
@@ -29,7 +31,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`scroll-smooth ${notoSans.variable} ${notoSerif.variable}`}>
-      <body className="font-sans text-sumi antialiased bg-kinari">{children}</body>
+      <body className="font-sans text-sumi antialiased bg-kinari">
+        {children}
+        <AmazonClickTracker />
+      </body>
+      <GoogleAnalytics gaId="G-TDN5DN3PD2" />
     </html>
   );
 }
