@@ -3,7 +3,7 @@ title: "ネイルダストの掃除どうしてる？｜机と健康を守る削
 date: "2026-07-02"
 category: "掃除・片付け"
 excerpt: "セルフネイルやジェルオフのあと、机に散らばる削りカス（ネイルダスト）。放置すると机が白く汚れるだけでなく、細かい粉を吸い込んでしまう心配も。作業を止めずにサッと片付けるダスト対策を紹介します。"
-image: "/images/blog/desktop-cleaner-white-lifestyle.jpg"
+image: "/images/blog/plus-desk-duo.jpg"
 productId: "sui-com"
 tags: ["ネイルダスト 掃除", "ジェルネイル 削りカス", "セルフネイル 机 掃除", "ネイル 粉塵 対策", "卓上クリーナー ネイル"]
 ---

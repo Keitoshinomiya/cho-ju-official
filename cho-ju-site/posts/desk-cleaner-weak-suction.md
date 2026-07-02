@@ -3,7 +3,7 @@ title: "卓上クリーナーが吸わない原因は？｜買い替える前に
 date: "2026-07-02"
 category: "商品ガイド"
 excerpt: "卓上クリーナーが急に吸わなくなった、吸引力が落ちた気がする——その原因の多くは故障ではなく、ダストボックスの満杯・吸込口の詰まり・電池残量です。買い替える前に確認したい5つのポイントと対処法を順番に解説します。"
-image: "/images/blog/desktop-cleaner-white-lifestyle.jpg"
+image: "/images/blog/suicom-detail.jpg"
 productId: "sui-com"
 tags: ["卓上クリーナー 吸わない", "卓上クリーナー 吸引力 落ちた", "卓上クリーナー 原因", "卓上クリーナー お手入れ", "卓上クリーナー ゴミ捨て"]
 ---

@@ -3,7 +3,7 @@ title: "卓上クリーナーは意味ある？「いらない」と言われる
 date: "2026-06-10"
 category: "商品ガイド"
 excerpt: "卓上クリーナーって正直、意味あるの？「普通の掃除機でいい」「すぐ使わなくなる」という声の真相と、逆に買って大正解になる人の条件を、メリット・デメリット両面から正直に解説します。"
-image: "/images/blog/desktop-cleaner-white-lifestyle.jpg"
+image: "/images/blog/suicom-product.jpg"
 productId: "sui-com"
 tags: ["卓上クリーナー 意味ある", "卓上クリーナー いらない", "卓上クリーナー 効果", "卓上そうじ機 口コミ", "卓上クリーナー おすすめ"]
 ---

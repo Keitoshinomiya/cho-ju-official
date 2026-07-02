@@ -3,7 +3,7 @@ title: "窓のサッシ掃除を簡単に終わらせる方法｜砂・ホコリ
 date: "2026-06-10"
 category: "掃除・片付け"
 excerpt: "雑巾で拭くと泥水になって余計に汚れる窓サッシ。正解は「濡らす前に乾いたゴミを吸い取る」こと。レールの砂・ホコリ・虫の死骸を最短で片付ける手順と道具を解説します。"
-image: "/images/blog/car-handy-cleaner-action.jpg"
+image: "/images/blog/plus-shelf-clean.jpg"
 productId: "sui-com-plus"
 tags: ["サッシ 掃除 簡単", "窓 レール 掃除", "サッシ 砂 ホコリ", "サッシ 掃除 道具", "ハンディクリーナー 隙間"]
 ---

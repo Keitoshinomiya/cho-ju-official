@@ -3,7 +3,7 @@ title: "布団圧縮袋は掃除機なしでも使える？空気を抜く方法
 date: "2026-06-10"
 category: "暮らしの工夫"
 excerpt: "布団圧縮袋を使いたいけど掃除機がない、ノズルが合わない、吸わせると掃除機が傷みそう…。手押し・ポンプ・電動の各方法を比較し、衣替えの圧縮作業が一番ラクになる方法を解説します。"
-image: "/images/products/sui-com-plus/02.jpg"
+image: "/images/blog/plus-sofa-clean.jpg"
 productId: "sui-com-plus"
 tags: ["布団圧縮袋 掃除機なし", "圧縮袋 空気 抜き方", "布団 収納 衣替え", "圧縮袋 電動", "ハンディクリーナー 空気抜き"]
 ---

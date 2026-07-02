@@ -3,7 +3,7 @@ title: "浮き輪の空気入れは電動が正解｜夏のプール準備も片
 date: "2026-07-02"
 category: "暮らしの工夫"
 excerpt: "浮き輪やビーチボールの空気入れ、毎年ヘトヘトになっていませんか？口で吹く・足踏みポンプの限界と、電動でサッと済ませる方法を紹介。実は「空気抜き」にも使えるので、帰りの片付けまでラクになります。"
-image: "/images/blog/car-handy-cleaner-action.jpg"
+image: "/images/blog/plus-blow.jpg"
 productId: "sui-com-plus"
 tags: ["浮き輪 空気入れ 電動", "浮き輪 空気入れ", "プール 空気入れ", "浮き輪 空気抜き", "電動 エアポンプ"]
 ---
