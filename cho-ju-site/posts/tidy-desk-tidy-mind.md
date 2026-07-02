@@ -3,7 +3,7 @@ title: "なぜ、デスクを片付けると頭が冴えるのか？「空白」
 date: "2024-11-25"
 category: "Mindfulness"
 excerpt: "良いアイデアが浮かばない時、まずは机の上を片付けてみませんか？視覚的なノイズを減らし、脳のワーキングメモリを解放する。「掃除」という行為がもたらす、クリエイティビティへの意外な効能。"
-image: "/images/blog/zen-desk.jpg"
+image: "/images/blog/suicom-eraser-after.jpg"
 productId: "sui-com"
 ---
 
@@ -35,7 +35,7 @@ productId: "sui-com"
 
 <div class="internal-link-card">
   <a href="/products/sui-com" class="flex items-center no-underline">
-    <img src="/images/blog/keyboard-cleaning.jpg" class="internal-link-thumb" alt="SUI-COM" />
+    <img src="/images/blog/suicom-product.jpg" class="internal-link-thumb" alt="SUI-COM" />
     <div class="internal-link-text">
       <strong>あわせて見たい：SUI-COM</strong>
       <span>ノイズのないデザインで、思考をクリアに。</span>

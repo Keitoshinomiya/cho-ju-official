@@ -3,7 +3,7 @@ title: "勉強に集中できないのは机が原因かも｜散らかりと集
 date: "2026-06-10"
 category: "リビング学習"
 excerpt: "勉強を始めてもすぐスマホ、気づけば机の上の何かをいじってる…。集中できない原因の一つは「視界のノイズ」。机と集中力の関係と、勉強前5分でできる環境リセット術を紹介します。"
-image: "/images/blog/zen-desk.jpg"
+image: "/images/blog/suicom-girl-desk.jpg"
 productId: "sui-com"
 tags: ["勉強 集中できない", "勉強 集中 方法 机", "勉強机 きれいにする", "受験勉強 環境", "リビング学習 集中"]
 ---

@@ -3,7 +3,7 @@ title: "【リビング学習の必需品】消しカス掃除が劇的に楽に
 date: "2024-12-04"
 category: "Education"
 excerpt: "リビング学習の最大の悩み「消しゴムのカス問題」。片付けない子供にイライラしていませんか？親子関係を良好にし、自発的な掃除習慣を育む卓上クリーナーSUI-COMの効果的な使い方をご紹介します。"
-image: "/images/blog/living-room-study.jpg"
+image: "/images/blog/suicom-girl-desk.jpg"
 productId: "sui-com"
 ---
 

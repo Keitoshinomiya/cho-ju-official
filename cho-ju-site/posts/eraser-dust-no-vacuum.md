@@ -3,7 +3,7 @@ title: "消しカスは掃除機で吸っていい？机を傷めない正しい
 date: "2026-06-10"
 category: "リビング学習"
 excerpt: "消しカスを掃除機で吸っていいのか、手で払うべきか、意外と知らない正解。床に落とす・息で吹く・粘着テープ…各方法のデメリットと、毎日続く消しカス問題のいちばんスマートな解決策を紹介します。"
-image: "/images/blog/living-room-study.jpg"
+image: "/images/blog/suicom-eraser-after.jpg"
 productId: "sui-com"
 tags: ["消しカス 掃除機", "消しカス 掃除 方法", "消しカス どうする", "リビング学習 消しカス", "卓上クリーナー"]
 ---

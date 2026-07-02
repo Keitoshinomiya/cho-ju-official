@@ -3,7 +3,7 @@ title: "愛車は「第二のリビング」。大人のドライブを格上げ
 date: "2024-11-28"
 category: "Car Life"
 excerpt: "週末のドライブ、ドアを開けた瞬間の空気感にこだわっていますか？シートの隙間の埃やマットの砂利を一掃し、愛車を最高のリラックス空間に変える、SUI-COM(+)の実力。"
-image: "/images/blog/car-interior-luxury.jpg"
+image: "/images/blog/plus-car-vent.jpg"
 productId: "sui-com-plus"
 ---
 

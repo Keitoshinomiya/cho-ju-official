@@ -3,7 +3,7 @@ title: "裁縫・手芸の糸くず掃除はこれで解決｜作業机をきれ
 date: "2026-06-10"
 category: "掃除・片付け"
 excerpt: "裁縫やハンドメイドのあと、机と床に散らばる糸くず・布の切れ端・チャコの粉。コロコロでは追いつかない細かいクズを、作業の流れを止めずにサッと片付ける方法を紹介します。"
-image: "/images/blog/minimalist-desk.jpg"
+image: "/images/blog/suicom-eraser-before.jpg"
 productId: "sui-com"
 tags: ["糸くず 掃除", "裁縫 後片付け", "ハンドメイド 机 掃除", "手芸 糸くず", "卓上クリーナー 手芸"]
 ---

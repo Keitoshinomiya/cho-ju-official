@@ -3,7 +3,7 @@ title: "消しカスが床に散らからない。親子のストレスを減ら
 date: "2026-06-02"
 category: "リビング学習"
 excerpt: "リビング学習の悩みといえば「消しゴムのカス」。テーブルに残り、床に落ち、スリッパの裏について…。怒らずに片付く仕組みを、3つの習慣としてご紹介します。"
-image: "/images/blog/living-room-study.jpg"
+image: "/images/blog/suicom-eraser-before.jpg"
 productId: "sui-com"
 tags: ["リビング学習", "消しカス", "卓上クリーナー", "子育て"]
 ---

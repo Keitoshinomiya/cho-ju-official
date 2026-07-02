@@ -3,7 +3,7 @@ title: "シャーペンの芯をこぼした時の掃除法｜手で触らず・
 date: "2026-07-02"
 category: "リビング学習"
 excerpt: "シャーペンの芯ケースをひっくり返して机中に芯が散乱…。手で集めると指も机も真っ黒、掃除機は詰まりやフィルター汚れの入口。折れた芯と黒鉛の粉を、汚れを広げずに片付ける正しい手順を解説します。"
-image: "/images/blog/living-room-study.jpg"
+image: "/images/blog/suicom-girl-desk.jpg"
 productId: "sui-com"
 tags: ["シャーペンの芯 こぼした", "シャーペンの芯 掃除", "シャー芯 散らばった", "シャー芯 粉 汚れ", "卓上クリーナー"]
 ---

@@ -3,7 +3,7 @@ title: "キーボードの隙間のゴミ・お菓子のカスを掃除する方
 date: "2026-06-10"
 category: "掃除・片付け"
 excerpt: "キーボードを逆さにして叩くと出てくる、ホコリ・お菓子のカス・謎の粒。在宅ワークのデスクを清潔に保つキーボード掃除の手順と、毎日続けられる時短メンテナンス術を解説します。"
-image: "/images/blog/keyboard-cleaning.jpg"
+image: "/images/blog/plus-desk-duo.jpg"
 productId: "sui-com"
 tags: ["キーボード 掃除", "キーボード 隙間 ゴミ", "キーボード ホコリ", "デスク 掃除 在宅ワーク", "キーボード 食べかす"]
 ---

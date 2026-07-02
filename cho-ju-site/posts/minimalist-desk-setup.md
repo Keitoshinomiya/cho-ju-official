@@ -3,7 +3,7 @@ title: "【デスク周り】大人の美学。ミニマルな卓上クリーナ
 date: "2024-12-04"
 category: "Lifestyle"
 excerpt: "デスクの乱れは心の乱れ。在宅ワークの集中力を高める鍵は「ノイズの除去」にありました。大人の美意識を満たし、ワークスペースを聖域にするミニマル・ガジェット、SUI-COMのご提案。"
-image: "/images/blog/minimalist-desk.jpg"
+image: "/images/blog/suicom-detail.jpg"
 productId: "sui-com"
 ---
 
