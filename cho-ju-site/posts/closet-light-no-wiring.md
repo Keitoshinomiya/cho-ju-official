@@ -3,7 +3,7 @@ title: "クローゼットに照明を後付けする方法｜配線不要で「
 date: "2026-06-10"
 category: "暮らしの工夫"
 excerpt: "クローゼットや押入れの奥が暗くて見えない。スマホのライトで照らしながら片手で服を探す毎日、終わりにしませんか。配線不要・貼るだけで後付けできるセンサーライト活用術。"
-image: "/images/products/yoru-terras/04.jpg"
+image: "/images/blog/yoru-closet.jpg"
 productId: "yoru-terras"
 tags: ["クローゼット 照明 後付け", "クローゼット ライト", "押入れ 照明", "センサーライト 室内", "配線不要 照明"]
 ---

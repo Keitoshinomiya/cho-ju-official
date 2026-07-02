@@ -3,7 +3,7 @@ title: "廊下の電気つけっぱなしの電気代はいくら？センサー
 date: "2026-06-10"
 category: "安心・見守り"
 excerpt: "夜の安全のために廊下の電気をつけっぱなしにしている家庭は多いもの。でもその電気代、積み重なると意外と大きい。人感センサーライトに替えるだけで「必要な時だけ点く」廊下に変わります。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-glow-2.jpg"
 productId: "yoru-terras"
 tags: ["廊下 電気 つけっぱなし", "電気代 節約", "センサーライト 廊下", "常夜灯 電気代", "足元灯"]
 ---

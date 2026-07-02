@@ -3,7 +3,7 @@ title: "センサーライトは電池式と充電式どっち？後悔しない
 date: "2026-06-10"
 category: "安心・見守り"
 excerpt: "センサーライトの電池式と充電式、結局どっちがいいの？電池代・交換の手間・設置場所の自由度・防災面から両者を比較し、使う場所別のおすすめを解説します。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-cable.jpg"
 productId: "yoru-terras"
 tags: ["センサーライト 電池式", "センサーライト 充電式", "センサーライト どっち", "足元灯", "人感センサー"]
 ---

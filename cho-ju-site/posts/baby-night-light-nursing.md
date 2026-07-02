@@ -3,7 +3,7 @@ title: "夜間授乳のライトは眩しくないものを｜赤ちゃんを起
 date: "2026-06-10"
 category: "安心・見守り"
 excerpt: "夜中の授乳やオムツ替えで部屋の電気をつけると、赤ちゃんが完全に覚醒してしまう…。手元だけをやさしく照らす授乳ライトの選び方と、人感センサー式が夜間育児に向いている理由を解説します。"
-image: "/images/products/yoru-terras/02.jpg"
+image: "/images/blog/yoru-nursing.jpg"
 productId: "yoru-terras"
 tags: ["授乳 ライト", "夜間授乳 ライト 眩しくない", "授乳ライト おすすめ", "赤ちゃん 夜 ライト", "ナイトライト"]
 ---

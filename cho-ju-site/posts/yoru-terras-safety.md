@@ -3,7 +3,7 @@ title: "実家の廊下は、意外と暗い。離れて暮らす親へ贈る「
 date: "2024-12-01"
 category: "Family Care"
 excerpt: "夜中のトイレや水飲み。私たちにとってはなんてことのない移動でも、高齢の親にとっては転倒のリスクと隣り合わせです。工事不要で優しく足元を照らす「ヨルテラス」が、家族の安全を守ります。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-shelf-glow.jpg"
 productId: "yoru-terras"
 ---
 

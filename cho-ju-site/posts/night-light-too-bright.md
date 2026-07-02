@@ -3,7 +3,7 @@ title: "常夜灯をつけて寝ると眩しい…｜「必要な時だけ点く
 date: "2026-07-02"
 category: "安心・見守り"
 excerpt: "常夜灯をつけて寝ると眩しくて眠りが浅くなる。でも真っ暗は不安…。そんなジレンマは「一晩中つけっぱなし」をやめれば解決します。人が動いた時だけ点く人感センサーライトという選択肢をご紹介します。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-nightstand.jpg"
 productId: "yoru-terras"
 tags: ["常夜灯", "つけて寝る 眩しい", "常夜灯 眩しい", "人感センサーライト", "ナイトライト"]
 ---

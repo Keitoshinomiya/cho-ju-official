@@ -3,7 +3,7 @@ title: "夜中のトイレが怖い人へ。足元をやさしく照らす「見
 date: "2026-06-01"
 category: "安心・見守り"
 excerpt: "夜中にふと目が覚めてトイレへ。真っ暗な廊下を手探りで歩くのは、実は転倒と隣り合わせです。眩しくなく、必要な時だけ灯る足元灯で、夜の不安を安心に変えましょう。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-glow-1.jpg"
 productId: "yoru-terras"
 tags: ["センサーライト", "足元灯", "夜中 トイレ", "転倒予防", "高齢者"]
 ---

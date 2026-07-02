@@ -3,7 +3,7 @@ title: "センサーライトの選び方｜明るさ・感度・電源で後悔
 date: "2026-06-02"
 category: "安心・見守り"
 excerpt: "センサーライトが欲しいけれど種類が多すぎて選べない。明るさ・光色・センサー感度・電源・設置方法の5つの視点から、屋内の足元灯として後悔しない選び方を解説します。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-product.jpg"
 productId: "yoru-terras"
 tags: ["センサーライト", "センサーライト 選び方", "人感センサー", "足元灯", "夜中 トイレ"]
 ---

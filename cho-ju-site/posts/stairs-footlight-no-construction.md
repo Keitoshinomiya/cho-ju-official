@@ -3,7 +3,7 @@ title: "階段の足元灯は工事不要で後付けできる｜夜の踏み外
 date: "2026-06-10"
 category: "安心・見守り"
 excerpt: "家の中でもっとも転倒が怖い場所、それが夜の階段。工事不要・配線不要で後付けできるセンサー式足元灯なら、賃貸でも今日から階段を安全にできます。設置位置のコツも解説。"
-image: "/images/blog/yoru-hallway.jpg"
+image: "/images/blog/yoru-install-close.jpg"
 productId: "yoru-terras"
 tags: ["階段 足元灯", "足元灯 工事不要", "階段 ライト 後付け", "階段 転倒 防止", "センサーライト 階段"]
 ---
