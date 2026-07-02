@@ -19,10 +19,10 @@
 | A9 | 停電 自動点灯 ライト 備え | 用途 | blackout-emergency-light | ✅今回 |
 | A10 | 実家 親 夜 見守り プレゼント | ギフト | parents-living-alone-night-safety | ✅今回 |
 | A11 | センサーライト 置き場所 室内 アイデア | 情報収集 | sensor-light-placement-ideas | ✅今回 |
-| A12 | センサーライト 屋外 と 室内 の違い | 比較検討 | （未） | 📝次回 |
-| A13 | 人感センサー 反応しない 原因 | トラブル | （未） | 📝次回 |
-| A14 | 常夜灯 つけて寝る 眩しい | 悩み | （未） | 📝次回 |
-| A15 | 防災グッズ 最低限 リスト 灯り | 情報収集 | （未） | 📝次回 |
+| A12 | センサーライト 屋外 と 室内 の違い | 比較検討 | sensor-light-outdoor-vs-indoor | ✅今回 |
+| A13 | 人感センサー 反応しない 原因 | トラブル | motion-sensor-not-working | ✅今回 |
+| A14 | 常夜灯 つけて寝る 眩しい | 悩み | night-light-too-bright | ✅今回 |
+| A15 | 防災グッズ 最低限 リスト 灯り | 情報収集 | emergency-light-checklist | ✅今回 |
 
 ## クラスタB: 卓上クリーナー（SUI-COM / sui-com）
 
@@ -35,9 +35,9 @@
 | B5 | キーボード 掃除 ホコリ 食べカス | 用途 | keyboard-crumbs-cleaning | ✅今回 |
 | B6 | 勉強 集中できない 机 汚い | 悩み | study-concentration-desk | ✅今回 |
 | B7 | 裁縫 糸くず 掃除 | 用途 | handicraft-thread-dust | ✅今回 |
-| B8 | 卓上クリーナー 吸わない 原因 | トラブル | （未） | 📝次回 |
-| B9 | シャーペンの芯 こぼした 掃除 | 悩み | （未） | 📝次回 |
-| B10 | ネイル ダスト 掃除 | 用途 | （未） | 📝次回 |
+| B8 | 卓上クリーナー 吸わない 原因 | トラブル | desk-cleaner-weak-suction | ✅今回 |
+| B9 | シャーペンの芯 こぼした 掃除 | 悩み | mechanical-pencil-lead-spill | ✅今回 |
+| B10 | ネイル ダスト 掃除 | 用途 | nail-dust-cleaning | ✅今回 |
 
 ## クラスタC: ハンディ4in1（SUI-COM+ / sui-com-plus）
 
@@ -47,8 +47,8 @@
 | C2 | 車内 掃除 コツ | 情報収集 | car-cleaning-secret | ✅既存 |
 | C3 | 布団圧縮袋 掃除機なし 空気抜き | 疑問 | futon-compression-without-vacuum | ✅今回 |
 | C4 | 窓 サッシ 掃除 簡単 | 用途 | window-sash-cleaning-easy | ✅今回 |
-| C5 | 浮き輪 空気入れ 電動 | 用途 | （未） | 📝次回 |
-| C6 | キャンプ 掃除/エアポンプ | 用途 | （未） | 📝次回 |
+| C5 | 浮き輪 空気入れ 電動 | 用途 | pool-float-electric-pump | ✅今回 |
+| C6 | キャンプ 掃除/エアポンプ | 用途 | camping-air-pump-cleaning | ✅今回 |
 
 ## 執筆ルール
 1. タイトルに狙うキーワードをそのまま含める（「キーワード｜ベネフィット」形式）
